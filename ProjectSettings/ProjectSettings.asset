@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 06673e53729b5dd43ae9e04e01c261a4
+  productGUID: a035969a5858fe343b5e9e4c14f698d1
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Advanced enemy generator
+  productName: Enemy Generator
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -838,14 +838,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Advanced enemy generator
+  metroPackageName: Enemy Generator
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Advanced enemy generator
+  metroApplicationDescription: Enemy Generator
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -916,10 +916,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 2fe4a59a-fe1d-40ab-a7fe-e051eb9af986
+  cloudProjectId: 44690d34-5a2f-4f05-9641-a3ba56a741ed
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Advanced enemy generator
+  projectName: Enemy Generator
   organizationId: zusdev
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
