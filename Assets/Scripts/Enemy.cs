@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
-    private Vector3 _direction;
+    private Vector3 _targetPosition;
 
     private MeshRenderer _meshRendrer;
 
@@ -17,19 +17,20 @@ public class Enemy : MonoBehaviour
         Move();
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.TryGetComponent(out Platform platform))
+        if (collider.gameObject.TryGetComponent(out Target target))
             Despawned?.Invoke(this);
     }
 
-    public void SetDirection(Vector3 direction)
+    public void SetTargetPosition(Vector3 position)
     {
-        _direction = direction;
+        _targetPosition = position;
     }
 
     private void Move()
     {
-        transform.Translate(_direction * _speed *  Time.deltaTime, Space.World);
+        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _speed * Time.deltaTime);
+        transform.LookAt(_targetPosition);
     }
 }

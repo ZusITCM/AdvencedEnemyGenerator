@@ -5,6 +5,8 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private Enemy _enemyPrefab;
 
+    [SerializeField] private Transform _target;
+
     private readonly int _defaultCapacityPool = 5;
     private readonly int _maxSizePool = 10;
 
@@ -39,19 +41,13 @@ public class Spawner : MonoBehaviour
     {
         enemy.Despawned += Release;
         enemy.transform.position = transform.position;
-        enemy.SetDirection(GetDirection());
+        enemy.SetTargetPosition(GetTargetPosition());
         enemy.gameObject.SetActive(true);
     }
 
-    private Vector3 GetDirection()
+    private Vector3 GetTargetPosition()
     {
-        float angle = Random.Range(0.0f, Mathf.PI * 2);
-
-        float x = Mathf.Cos(angle);
-        float y = 0.0f;
-        float z = Mathf.Sin(angle);
-
-        return new Vector3(x, y, z);
+        return _target.position;
     }
 }
     
