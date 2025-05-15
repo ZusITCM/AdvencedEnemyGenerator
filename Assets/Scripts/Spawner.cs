@@ -41,13 +41,13 @@ public class Spawner : MonoBehaviour
     {
         enemy.Despawned += Release;
         enemy.transform.position = transform.position;
-        enemy.SetTargetPosition(GetTargetPosition());
+        enemy.SetTarget(GetTargetPosition());
         enemy.gameObject.SetActive(true);
     }
 
-    private Vector3 GetTargetPosition()
+    private Transform GetTargetPosition()
     {
-        return _target.position;
+        return _target;
     }
 }
     

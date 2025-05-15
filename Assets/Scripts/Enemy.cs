@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
-    private Vector3 _targetPosition;
+    private Transform _target;
 
     private MeshRenderer _meshRendrer;
 
@@ -23,14 +23,14 @@ public class Enemy : MonoBehaviour
             Despawned?.Invoke(this);
     }
 
-    public void SetTargetPosition(Vector3 position)
+    public void SetTarget(Transform target)
     {
-        _targetPosition = position;
+        _target = target;
     }
 
     private void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _speed * Time.deltaTime);
-        transform.LookAt(_targetPosition);
+        transform.position = Vector3.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
+        transform.LookAt(_target);
     }
 }
